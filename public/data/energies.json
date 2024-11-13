@@ -1,0 +1,51 @@
+[
+    {
+        "title": "Hidrelétrica",
+        "image": "https://energytheory.com/wp-content/uploads/2023/12/hydroelectric-power-plant.jpg",
+        "description": "• Primeira fonte desenvolvida no Brasil, aproveitando o potencial natural.\n• Usinas de grande porte são geralmente afastadas dos centros de consumo, exigindo grandes investimentos em linhas de transmissão.\n• Usinas com reservatório atuam como baterias para o sistema elétrico, permitindo a geração de energia mesmo em períodos de seca.\n• A maior parte do potencial inexplorado está na Região Norte do Brasil, especialmente na Floresta Amazônica, onde há proteção ambiental e presença de comunidades indígenas.\n• A região do Rio Amazonas é muito plana, com pouco desnível, resultando em uma baixa energia potencial para esse tipo de geração.",
+        "popularity": 8,
+        "sustainability": 6
+    },
+    {
+        "title": "Solar",
+        "image": "/images/solar.jpeg",
+        "description": "• Fonte de energia limpa e abundante, especialmente em regiões com alta incidência solar, como o Nordeste do Brasil.\n• Requer investimentos iniciais para instalação, mas tem baixos custos de manutenção.\n• Permite a geração descentralizada, próxima dos centros de consumo, reduzindo perdas de energia.\n• Pode ser instalada em áreas residenciais, comerciais e industriais.\n• A produção depende das condições climáticas, com menor eficiência em dias nublados ou chuvosos.",
+        "popularity": 9,
+        "sustainability": 9
+    },
+    {
+        "title": "Eólica",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Wind_turbines_in_southern_California_2016.jpg",
+        "description": "• Aproveita a força dos ventos para geração de energia, sendo uma fonte limpa e renovável.\n• No Brasil, o potencial é maior no litoral nordestino, onde há ventos constantes e fortes.\n• Turbinas eólicas podem ser instaladas em terra (onshore) ou no mar (offshore).\n• Impacto ambiental é considerado baixo, mas há questões quanto à interferência na fauna, especialmente em aves e morcegos.\n• Produção intermitente, dependendo das condições do vento, o que pode exigir sistemas de armazenamento para garantir a estabilidade.",
+        "popularity": 8,
+        "sustainability": 8
+    },
+    {
+        "title": "Biomassa",
+        "image": "/images/biomassa.jpeg",
+        "description": "• Produzida a partir de resíduos orgânicos, como resíduos agrícolas, florestais e urbanos.\n• Ajuda na gestão de resíduos ao transformá-los em energia.\n• Pode ser utilizada tanto para gerar eletricidade quanto calor, além de biocombustíveis.\n• A produção de biomassa pode emitir gases poluentes, embora em menor escala comparado aos combustíveis fósseis.\n• A disponibilidade depende do tipo de biomassa e da localização, sendo mais viável em regiões agrícolas.",
+        "popularity": 7,
+        "sustainability": 7
+    },
+    {
+        "title": "Geotérmica",
+        "image": "/images/geotermica.jpeg",
+        "description": "• Utiliza o calor proveniente do interior da Terra para gerar eletricidade ou calor.\n• A geração geotérmica é contínua, ao contrário de outras fontes intermitentes como solar e eólica.\n• Requer condições geológicas específicas, como a proximidade de fontes de calor subterrâneas (zonas vulcânicas).\n• Impacto ambiental é relativamente baixo, embora a perfuração possa liberar gases prejudiciais em alguns casos.\n• No Brasil, o potencial é baixo devido à falta de atividade geotérmica significativa.",
+        "popularity": 4,
+        "sustainability": 9
+    },
+    {
+        "title": "Maremotriz",
+        "image": "/images/maremotriz.jpeg",
+        "description": "• Aproveita o movimento das marés para geração de energia, sendo uma fonte renovável e previsível.\n• Impacto ambiental pode ser relevante para ecossistemas costeiros e marítimos.\n• Requer infraestrutura complexa e cara, limitada a regiões com alta amplitude de maré.\n• A energia das marés é uma fonte previsível e confiável, mas de baixo potencial em comparação com outras fontes renováveis.\n• No Brasil, o potencial é limitado pela baixa amplitude de marés na maioria do litoral.",
+        "popularity": 3,
+        "sustainability": 8
+    },
+    {
+        "title": "Hidrogênio Verde",
+        "image": "/images/hidrogenio-verde.jpeg",
+        "description": "• Produzido a partir de fontes renováveis, como energia solar e eólica, por meio da eletrólise da água.\n• Pode ser armazenado e transportado, o que facilita sua utilização em diferentes aplicações.\n• Alta densidade energética, sendo uma alternativa promissora para setores de difícil descarbonização, como a indústria pesada e o transporte de longa distância.\n• O processo de produção é ainda caro, e a tecnologia está em fase de desenvolvimento.\n• O impacto ambiental é mínimo se produzido com energia renovável, mas depende da origem da eletricidade utilizada.",
+        "popularity": 5,
+        "sustainability": 10
+    }
+]
