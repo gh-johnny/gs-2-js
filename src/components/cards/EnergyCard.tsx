@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { TEnergy } from '../../types/energy-type';
 
 const Card = styled.div`
   background-color: #fff;
@@ -33,11 +34,15 @@ const CardContent = styled.div`
   line-height: 1.5;
 `;
 
-export default function EnergyCard() {
+interface EnergyCardProps {
+    card: TEnergy
+}
+
+export default function EnergyCard({card} : EnergyCardProps) {
     return (
         <Card>
             <CardHeader>
-                <CardTitle>Card Title</CardTitle>
+                <CardTitle>{card.title}</CardTitle>
                 <button>Action</button>
             </CardHeader>
             <CardContent>
@@ -46,4 +51,3 @@ export default function EnergyCard() {
         </Card>
     )
 }
-

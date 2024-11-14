@@ -51,6 +51,9 @@ body {
 
   background-color: var(--bg-primary);
   color: var(--fg-primary);
+
+  width: 100dvw;
+  overflow-x: hidden;
 }
 
 hr {
