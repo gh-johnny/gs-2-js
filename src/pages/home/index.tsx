@@ -3,7 +3,7 @@ import EnergyCard from "../../components/cards/EnergyCard"
 import { fetchEnergies } from "../../api/fetch-energies"
 import { Link } from "react-router-dom"
 import { TEnergy } from "../../types/energy-type"
-import { Sun, Wind, Zap } from "lucide-react"
+import { Earth, HousePlug, Leaf, Sun, Wind, Zap } from "lucide-react"
 import useMount from "../../hooks/useMount"
 import styled from "styled-components"
 
@@ -72,24 +72,51 @@ const HeroSection = styled.section`
       bottom: 0;
       right: 0;
       position: absolute;
-      animation: changeColor 40s infinite alternate;
+      animation: changeColorReverse 45s infinite alternate;
   }
 
   @keyframes changeColor {
-    from {
-        opacity: 0
-    }
-    to {
-        opacity: 1
-    }
+      0% {
+          opacity: 0
+      }
+      25% {
+          opacity: 1
+      }
+      50% {
+          opacity: 0
+      }
+      75% {
+          opacity: 0
+      }
+      100% {
+          opacity: 1
+      }
+  }
 
-}
+  @keyframes changeColorReverse {
+      0% {
+          opacity: 1
+      }
+      25% {
+          opacity: 0
+      }
+      50% {
+          opacity: 1
+      }
+      75% {
+          opacity: 1
+      }
+      100% {
+          opacity: 0
+      }
+  }
 `;
 
 const HeroContent = styled.div`
   max-width: 768px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 
   button {
       border: 1px solid var(--fg-primary);
@@ -110,6 +137,7 @@ const HeroTitle = styled.h1`
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+  padding-inline: 3rem;
 
   @media (min-width: 768px) {
     font-size: 3rem;
@@ -208,6 +236,40 @@ const Copyright = styled.div`
   text-align: center;
 `;
 
+const HeroIcon = styled.div`
+ position: absolute;
+ width: 4rem;
+ height: 4rem;
+ color: #fff;
+ z-index: -1;
+
+    &:nth-child(even) {
+        animation: changeColorReverse 45s infinite alternate;
+    }
+
+    &:nth-child(odd) {
+        animation: changeColor 45s infinite alternate;
+    }
+
+    &:nth-child(3) {
+        top: 27%;
+        right: -4%;
+    }
+
+    &:nth-child(4) {
+        top: 27%;
+        right: -4%;
+    }
+
+    &:nth-child(5) {
+        left: 2%;
+    }
+
+    &:nth-child(6) {
+        left: 2%;
+    }
+`
+
 export default function Home() {
 
     const [energySources, setEnergySources] = useState<TEnergy[] | undefined>([])
@@ -241,6 +303,21 @@ export default function Home() {
                     <HeroContent>
                         <HeroTitle>Acesso Universal à Energia</HeroTitle>
                         <HeroDescription>Explorando fontes de energia sustentáveis para um futuro mais brilhante e acessível a todos.</HeroDescription>
+                        <HeroIcon>
+                            <Zap />
+                        </HeroIcon>
+
+                        <HeroIcon>
+                            <Leaf />
+                        </HeroIcon>
+
+                        <HeroIcon>
+                            <HousePlug />
+                        </HeroIcon>
+
+                        <HeroIcon>
+                            <Earth />
+                        </HeroIcon>
                         <button>
                             Saiba Mais
                         </button>
