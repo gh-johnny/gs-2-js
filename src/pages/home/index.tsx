@@ -207,8 +207,16 @@ const SourcesTitle = styled.h2`
   font-weight: bold;
   text-align: center;
   width: 100%;
-  padding-block: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
   border-top: 1px solid var(--bg-accent);
+`
+
+const SourcesText = styled.p`
+  max-width: 768px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  padding-bottom: 2rem;
 `
 
 const SourcesGrid = styled.div`
@@ -339,11 +347,10 @@ export default function Home() {
                 <SourcesSection id="sources">
                     <div>
                         <SourcesTitle>Fontes de Energia</SourcesTitle>
+                        <SourcesText>Aqui estão as fontes de energia com rankings (de 1 - 10) elaborados por nós de acordo com pesquisas da área, não refletindo num valor absoluto real, porém uma mera estimativa.</SourcesText>
                         <SourcesGrid>
                             {energySources?.map((source) => (
-                                <>
-                                    <EnergyCard card={source} />
-                                </>
+                                <EnergyCard card={source} />
                             ))}
                         </SourcesGrid>
                     </div>

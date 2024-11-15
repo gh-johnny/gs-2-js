@@ -29,21 +29,53 @@ const CardContent = styled.div`
   font-size: 0.95rem;
   color: #666;
   line-height: 1.5;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
 `;
+
+const CardImage = styled.div`
+ width: 100%;
+ height: 100%;
+ overflow: hidden;
+ border-radius: 8px;
+ border: 1px solid var(--bg-accent);
+
+ img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+`
+
+const CardSpecs = styled.div`
+ display: flex;
+ flex-direction: column;
+ padding-top: 1rem;
+
+ span {
+     font-weight: bold;
+ }
+`
 
 interface EnergyCardProps {
     card: TEnergy
 }
 
-export default function EnergyCard({card} : EnergyCardProps) {
+export default function EnergyCard({ card }: EnergyCardProps) {
     return (
         <Card>
             <CardHeader>
                 <CardTitle>{card.title}</CardTitle>
-                <button>Action</button>
             </CardHeader>
             <CardContent>
-                This is the content of the card. It can contain any type of information or components.
+                <CardImage>
+                    <img src={card.image} />
+                </CardImage>
+                <CardSpecs>
+                    <div>Popularidade: <span>{card.popularity}</span></div>
+                    <div>Sustentabilidade: <span>{card.sustainability}</span></div>
+                </CardSpecs>
             </CardContent>
         </Card>
     )
