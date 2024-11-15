@@ -44,17 +44,14 @@ const NavLink = styled(Link)`
   transition: all 100ms ease;
 
   &:hover {
-      border-bottom: 2px solid var(--fg-primary);
+      border-bottom: 2px solid var(--bg-accent);
   }
-`;
-
-const Main = styled.main`
 `;
 
 const HeroSection = styled.section`
   color: white;
   padding: 5rem 0;
-  border-block: 1px solid var(--fg-primary);
+  border-block: 1px solid var(--bg-accent);
   width: 100dvw;
   position: relative;
   isolation: isolate;
@@ -119,7 +116,7 @@ const HeroContent = styled.div`
   position: relative;
 
   button {
-      border: 1px solid var(--fg-primary);
+      border: 1px solid var(--bg-accent);
       padding: .75rem 1.5rem;
       border-radius: 12px;
       background: #fff;
@@ -133,7 +130,7 @@ const HeroContent = styled.div`
 `;
 
 const HeroTitle = styled.h1`
-  text-shadow: -1px -1px 0 var(--fg-primary), 1px -1px 0 var(--fg-primary), -1px  1px 0 var(--fg-primary), 1px  1px 0 var(--fg-primary);
+  text-shadow: -1px -1px 0 var(--bg-accent), 1px -1px 0 var(--bg-accent), -1px  1px 0 var(--bg-accent), 1px  1px 0 var(--bg-accent);
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
@@ -145,95 +142,9 @@ const HeroTitle = styled.h1`
 `;
 
 const HeroDescription = styled.p`
-  text-shadow: -1px -1px 0 var(--fg-primary), 1px -1px 0 var(--fg-primary), -1px  1px 0 var(--fg-primary), 1px  1px 0 var(--fg-primary);
+  text-shadow: -1px -1px 0 var(--bg-accent), 1px -1px 0 var(--bg-accent), -1px  1px 0 var(--bg-accent), 1px  1px 0 var(--bg-accent);
   font-size: 1.25rem;
   margin-bottom: 2rem;
-`;
-
-const AboutSection = styled.section`
-  padding: 4rem 0;
-  text-align: center;
-`;
-
-const AboutTitle = styled.h2`
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-`;
-
-const AboutText = styled.p`
-  max-width: 768px;
-  margin: 0 auto;
-  font-size: 1.125rem;
-`;
-
-const SourcesSection = styled.section`
-  padding: 4rem 0;
-`;
-
-const SourcesGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-`;
-
-const StyledCard = styled.div`
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-
-`;
-
-const Footer = styled.footer`
-  padding: 2rem 0;
-`;
-
-const FooterContainer = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-`;
-
-const FooterSection = styled.div`
-  margin-bottom: 1.5rem;
-`;
-
-const FooterTitle = styled.h4`
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-`;
-
-const FooterText = styled.p`
-
-`;
-
-const FooterLinks = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`;
-
-const FooterLink = styled(Link)`
-
-`;
-
-const FooterIcons = styled.div`
-  display: flex;
-  gap: 1rem;
-`;
-
-const Copyright = styled.div`
-  border-top: 1px solid #4a5568;
-  padding-top: 2rem;
-  text-align: center;
 `;
 
 const HeroIcon = styled.div`
@@ -270,6 +181,100 @@ const HeroIcon = styled.div`
     }
 `
 
+const AboutSection = styled.section`
+  padding: 4rem 0;
+  text-align: center;
+`;
+
+const AboutTitle = styled.h2`
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+`;
+
+const AboutText = styled.p`
+  max-width: 768px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+`;
+
+const SourcesSection = styled.section`
+  padding-top: 2rem;
+`;
+
+const SourcesTitle = styled.h2`
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  padding-block: 3rem;
+  border-top: 1px solid var(--bg-accent);
+`
+
+const SourcesGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  border-bottom: 1px solid var(--bg-accent);
+  margin: 0 auto;
+  padding: 4vw;
+  padding-bottom: 8rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+`;
+
+const Footer = styled.footer`
+  padding: 2rem 0;
+`;
+
+const FooterContainer = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+`;
+
+const FooterSection = styled.div`
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1rem;
+`;
+
+const FooterTitle = styled.h4`
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+`;
+
+const FooterText = styled.p`
+`;
+
+const FooterLinks = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+
+const FooterLink = styled(Link)`
+`;
+
+const FooterIcons = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
+
+const Copyright = styled.div`
+  border-top: 1px solid #4a5568;
+  padding-top: 2rem;
+  text-align: center;
+`;
+
 export default function Home() {
 
     const [energySources, setEnergySources] = useState<TEnergy[] | undefined>([])
@@ -298,7 +303,7 @@ export default function Home() {
                 </NavContainer>
             </Header>
 
-            <Main>
+            <main>
                 <HeroSection>
                     <HeroContent>
                         <HeroTitle>Acesso Universal à Energia</HeroTitle>
@@ -333,7 +338,7 @@ export default function Home() {
 
                 <SourcesSection id="sources">
                     <div>
-                        <h2>Fontes de Energia</h2>
+                        <SourcesTitle>Fontes de Energia</SourcesTitle>
                         <SourcesGrid>
                             {energySources?.map((source) => (
                                 <>
@@ -343,36 +348,36 @@ export default function Home() {
                         </SourcesGrid>
                     </div>
                 </SourcesSection>
-            </Main>
+            </main>
 
             <Footer>
                 <FooterContainer>
                     <FooterSection>
-                        <div>
+                        <section>
                             <FooterTitle>EnergyAccess</FooterTitle>
                             <FooterText>Promovendo o acesso universal à energia sustentável.</FooterText>
-                        </div>
-                        <FooterSection>
-                            <h4>Links Rápidos</h4>
+                        </section>
+                        <section>
+                            <FooterTitle>Links Rápidos</FooterTitle>
                             <FooterLinks>
                                 <li><FooterLink to="#about">Sobre</FooterLink></li>
                                 <li><FooterLink to="#sources">Fontes de Energia</FooterLink></li>
                                 <li><FooterLink to="#contact">Contato</FooterLink></li>
                             </FooterLinks>
-                        </FooterSection>
-                        <div>
-                            <h4>Siga-nos</h4>
+                        </section>
+                        <section>
+                            <FooterTitle>Siga-nos</FooterTitle>
                             <FooterIcons>
                                 <a href="#"><Sun /></a>
                                 <a href="#"><Wind /></a>
                                 <a href="#"><Zap /></a>
                             </FooterIcons>
-                        </div>
+                        </section>
                     </FooterSection>
-                    <Copyright>
-                        <p>&copy; {new Date().getFullYear()} EnergyAccess. Todos os direitos reservados.</p>
-                    </Copyright>
                 </FooterContainer>
+                <Copyright>
+                    <p>&copy; {new Date().getFullYear()} EnergyAccess. Todos os direitos reservados.</p>
+                </Copyright>
             </Footer>
         </Container>
     )

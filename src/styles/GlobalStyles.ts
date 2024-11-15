@@ -4,7 +4,7 @@ const GlobalStyles = createGlobalStyle`
 :root {
     --bg-primary: #f8f8ec;
     --bg-secondary: #fff;
-    --bg-accent: #a1a1aa;
+    --bg-accent: #4a5568;
 
     --fg-primary: #18181b;
     --fg-secondary: gainsboro;
