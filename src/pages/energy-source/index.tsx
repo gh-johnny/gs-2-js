@@ -71,7 +71,56 @@ const ContentWrapper = styled.section`
   height: 70%;
   border: 1px solid var(--bg-accent);
   border-radius: 12px;
-  overflow: hidden;
+  position: relative;
+
+  @media(max-width: 1023px){
+      flex-direction: column;
+      margin-bottom: 4rem;
+      height: 80%;
+
+      h1 {
+          height: 5rem;
+          position: absolute;
+          top: 0rem;
+      }
+
+      aside:first-child {
+          width: 100%;
+          margin-top: 5rem;
+          height: 25vh;
+          border-right: 0;
+          border-bottom: 1px solid var(--bg-accent);
+      }
+
+      aside:nth-child(2) {
+          overflow-x: hidden;
+          overflow-y: auto;
+
+          article {
+            ul {
+                padding: 2.5rem 2rem 0 2.5rem;
+                height: auto;
+                list-style-type: none;
+
+                li {
+                    padding: 0 0 5vh 0;
+                    text-align: center;
+                    border-bottom: 1px solid var(--bg-accent);
+
+                    &:last-child {
+                        border-bottom: 1px solid transparent;
+                    }
+                }
+            }
+
+            &>*:last-child {
+                flex-direction: column;
+                padding-inline: 2rem;
+            }
+          }
+      }
+  }
+
 `
 
 const AsideImage = styled.aside`
