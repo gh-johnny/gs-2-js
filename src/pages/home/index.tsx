@@ -142,6 +142,7 @@ const HeroDescription = styled.p`
   text-shadow: -1px -1px 0 var(--bg-accent), 1px -1px 0 var(--bg-accent), -1px  1px 0 var(--bg-accent), 1px  1px 0 var(--bg-accent);
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  padding-inline: 1.5rem;
 `;
 
 const HeroIcon = styled.div`
@@ -273,9 +274,6 @@ const FooterLinks = styled.ul`
   margin: 0;
 `;
 
-const FooterLink = styled(Link)`
-`;
-
 const FooterIcons = styled.div`
   display: flex;
   gap: 1rem;
@@ -285,6 +283,7 @@ const Copyright = styled.div`
   border-top: 1px solid #4a5568;
   padding-top: 2rem;
   text-align: center;
+  padding-inline: 2rem;
 `;
 
 export default function Home() {
@@ -371,9 +370,9 @@ export default function Home() {
                         <section>
                             <FooterTitle>Links Rápidos</FooterTitle>
                             <FooterLinks>
-                                <li><FooterLink to="#about">Sobre</FooterLink></li>
-                                <li><FooterLink to="#sources">Fontes de Energia</FooterLink></li>
-                                <li><FooterLink to="#contact">Contato</FooterLink></li>
+                                <li><Link to="#about">Sobre</Link></li>
+                                <li><Link to="#sources">Fontes de Energia</Link></li>
+                                <li><Link to="#contact">Contato</Link></li>
                             </FooterLinks>
                         </section>
                         <section id="contact">
