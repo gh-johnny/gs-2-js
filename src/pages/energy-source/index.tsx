@@ -18,6 +18,31 @@ const Main = styled.main`
 
 const BackButtonWrapper = styled.div`
   width: 70%;
+
+  @media(max-width: 1023px){
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+
+      button {
+          width: 100%;
+          border-radius: 0px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.2rem;
+
+          *:first-child {
+              width: 21px;
+          }
+
+          *:last-child {
+              margin-top: 2px;
+          }
+      }
+  }
 `
 
 const BackButton = styled.button`
@@ -28,6 +53,10 @@ const BackButton = styled.button`
   display: flex;
   column-gap: .3rem;
   transition: all 0.1s ease;
+
+  *:first-child {
+    width: 16px;
+  }
 
   &:hover {
       scale: 1.03;
@@ -127,7 +156,7 @@ export default function EnergySource() {
             <BackButtonWrapper>
                 <Link to="/">
                     <BackButton>
-                        <ChevronLeft width={16} />
+                        <ChevronLeft />
                         <span>Voltar</span>
                     </BackButton>
                 </Link>
