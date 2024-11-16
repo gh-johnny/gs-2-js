@@ -9,7 +9,13 @@ const Card = styled.div`
 
   padding: 1.5rem;
   width: 300px;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
+
+  &:hover {
+      scale: 1.03;
+      cursor: pointer;
+      opacity: .9;
+  }
 `;
 
 const CardHeader = styled.div`

@@ -227,6 +227,7 @@ const SourcesGrid = styled.div`
   margin: 0 auto;
   padding: 4vw;
   padding-bottom: 8rem;
+  gap: 3rem;
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
@@ -234,6 +235,10 @@ const SourcesGrid = styled.div`
 
   @media (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  &>*:last-child {
+      grid-column: 1 / -1;
   }
 `;
 
@@ -350,7 +355,9 @@ export default function Home() {
                         <SourcesText>Aqui estão as fontes de energia com rankings (de 1 - 10) elaborados por nós de acordo com pesquisas da área, não refletindo num valor absoluto real, porém uma mera estimativa.</SourcesText>
                         <SourcesGrid>
                             {energySources?.map((source) => (
-                                <EnergyCard card={source} />
+                                <Link to={`energy-source/${source.id}`}>
+                                    <EnergyCard card={source} />
+                                </Link>
                             ))}
                         </SourcesGrid>
                     </div>
