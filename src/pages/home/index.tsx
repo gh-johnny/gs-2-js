@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react"
-import EnergyCard from "../../components/cards/EnergyCard"
+import EnergyCard from "../../components/cards/energy-card"
 import { fetchEnergies } from "../../api/fetch-energies"
 import { Link } from "react-router-dom"
 import { TEnergy } from "../../types/energy-type"
