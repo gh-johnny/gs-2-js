@@ -14,16 +14,12 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const Header = styled.header`
-
-`;
-
 const NavContainer = styled.div`
   width: 100%;
   diplay: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 10rem;
+  padding: 1rem 2vw;
 `;
 
 const Navbar = styled.nav`
@@ -33,7 +29,7 @@ const Navbar = styled.nav`
 
   ul {
       display: flex;
-      column-gap: 2rem;
+      column-gap: 2vw;
   }
 `;
 
@@ -53,6 +49,7 @@ const HeroSection = styled.section`
   padding: 5rem 0;
   border-block: 1px solid var(--bg-accent);
   width: 100dvw;
+  overflow: hidden;
   position: relative;
   isolation: isolate;
   background: linear-gradient(to right, var(--yellow-primary), var(--orange-primary));
@@ -303,18 +300,16 @@ export default function Home() {
 
     return (
         <Container>
-            <Header>
-                <NavContainer>
-                    <Navbar>
-                        <Link to="/">EnergyAccess</Link>
-                        <ul className="flex space-x-4">
-                            <li><NavLink to="#about">Sobre</NavLink></li>
-                            <li><NavLink to="#sources">Fontes</NavLink></li>
-                            <li><NavLink to="#contact">Contato</NavLink></li>
-                        </ul>
-                    </Navbar>
-                </NavContainer>
-            </Header>
+            <NavContainer>
+                <Navbar>
+                    <Link to="/">EnergyAccess</Link>
+                    <ul className="flex space-x-4">
+                        <li><NavLink to="#about">Sobre</NavLink></li>
+                        <li><NavLink to="#sources">Fontes</NavLink></li>
+                        <li><NavLink to="#contact">Contato</NavLink></li>
+                    </ul>
+                </Navbar>
+            </NavContainer>
 
             <main>
                 <HeroSection>
