@@ -33,7 +33,7 @@ const Navbar = styled.nav`
   }
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled.a`
   font-size: 1.125rem;
   border: 2px solid transparent;
   border-radius: 3px;
@@ -112,7 +112,7 @@ const HeroContent = styled.div`
   text-align: center;
   position: relative;
 
-  button {
+  a {
       border: 1px solid var(--bg-accent);
       padding: .75rem 1.5rem;
       border-radius: 12px;
@@ -193,6 +193,7 @@ const AboutText = styled.p`
   max-width: 768px;
   margin: 0 auto;
   font-size: 1.125rem;
+  padding-inline: 2rem; 
 `;
 
 const SourcesSection = styled.section`
@@ -214,6 +215,8 @@ const SourcesText = styled.p`
   margin: 0 auto;
   font-size: 1.125rem;
   padding-bottom: 2rem;
+  padding-inline: 2rem; 
+  text-align: center;
 `
 
 const SourcesGrid = styled.div`
@@ -254,15 +257,14 @@ const FooterSection = styled.div`
   display: flex;
   justify-content: space-between;
   padding-block: 1rem;
+  flex-wrap: wrap;
+  row-gap: 3rem;
 `;
 
 const FooterTitle = styled.h4`
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 1rem;
-`;
-
-const FooterText = styled.p`
 `;
 
 const FooterLinks = styled.ul`
@@ -304,9 +306,9 @@ export default function Home() {
                 <Navbar>
                     <Link to="/">EnergyAccess</Link>
                     <ul className="flex space-x-4">
-                        <li><NavLink to="#about">Sobre</NavLink></li>
-                        <li><NavLink to="#sources">Fontes</NavLink></li>
-                        <li><NavLink to="#contact">Contato</NavLink></li>
+                        <li><NavLink href="#about">Sobre</NavLink></li>
+                        <li><NavLink href="#sources">Fontes</NavLink></li>
+                        <li><NavLink href="#contact">Contato</NavLink></li>
                     </ul>
                 </Navbar>
             </NavContainer>
@@ -331,9 +333,9 @@ export default function Home() {
                         <HeroIcon>
                             <Earth />
                         </HeroIcon>
-                        <button>
+                        <a href="#about">
                             Saiba Mais
-                        </button>
+                        </a>
                     </HeroContent>
                 </HeroSection>
 
@@ -349,8 +351,8 @@ export default function Home() {
                         <SourcesTitle>Fontes de Energia</SourcesTitle>
                         <SourcesText>Aqui estão as fontes de energia com rankings (de 1 - 10) elaborados por nós de acordo com pesquisas da área, não refletindo num valor absoluto real, porém uma mera estimativa.</SourcesText>
                         <SourcesGrid>
-                            {energySources?.map((source) => (
-                                <Link to={`energy-source/${source.id}`}>
+                            {energySources?.map((source, index) => (
+                                <Link  key={index} to={`energy-source/${source.id}`}>
                                     <EnergyCard card={source} />
                                 </Link>
                             ))}
@@ -364,7 +366,7 @@ export default function Home() {
                     <FooterSection>
                         <section>
                             <FooterTitle>EnergyAccess</FooterTitle>
-                            <FooterText>Promovendo o acesso universal à energia sustentável.</FooterText>
+                            <p>Promovendo o acesso universal à energia sustentável.</p>
                         </section>
                         <section>
                             <FooterTitle>Links Rápidos</FooterTitle>
@@ -374,7 +376,7 @@ export default function Home() {
                                 <li><FooterLink to="#contact">Contato</FooterLink></li>
                             </FooterLinks>
                         </section>
-                        <section>
+                        <section id="contact">
                             <FooterTitle>Siga-nos</FooterTitle>
                             <FooterIcons>
                                 <a href="#"><Sun /></a>

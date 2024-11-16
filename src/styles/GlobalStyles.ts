@@ -42,6 +42,8 @@ html,
   font-feature-settings: theme('fontFamily.sans[1].fontFeatureSettings', normal);
   font-variation-settings: theme('fontFamily.sans[1].fontVariationSettings', normal);
   -webkit-tap-highlight-color: transparent;
+
+  scroll-behavior: smooth;
 }
 
 body {
