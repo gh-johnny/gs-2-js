@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TEnergy } from '../../types/energy-type';
+import { TEnergy } from '../../../types/energy-type';
 
 const Card = styled.div`
   background-color: var(--bg-primary);
