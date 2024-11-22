@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+# GS 2 - Web Development
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Integrantes 👋
+<ul> 
+    <li>João Marcelo Furtado Romero (RM555199)</li>
+    <li>Kayky Silva Stiliano (RM555148)</li>
+</ul>
 
-Currently, two official plugins are available:
+## Instruções de uso 💻
+Com o projeto em seu computador, abra ele no terminal GitBash e instale as dependências do projeto a partir do comando 'npm install', depois disso você irá iniciar o servidor de desenvolvimento, isso deve ser feito a partir do comando 'npm run dev' no mesmo terminal, com o servidor iniciado você poderá acessar o site na porta especificada no terminal (Ex: 'http://localhost:3000'), então abra o seu navegador e acesse o endereço da porta para visualizar o site em funcionamento.  
+Nota: O site deve ser aberto através do servidor local para garantir que todas as funcionalidades, como o React Router, funcionem corretamente. Além disso, a execução local proporciona um ambiente seguro e adequado para o desenvolvimento e testes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Explicação do Projeto 📖
+Este é um projeto desenvolvido com o objetivo de abordar o tema Acesso Universal à Energia. O foco da aplicação é informar, educar e promover reflexões sobre as diversas fontes de energia, sua acessibilidade, impacto ambiental e benefícios para as comunidades ao redor do mundo.
+ 
+## Principais dependências 📦
+Entre as principais dependências temos bibliotecas para construção da interface e roteamento, interfaces e ferramentas de construção e desenvolvimento como :
+<ul>
+    <li>Vite</li>
+    <li>Axios</li>
+    <li>Lucide-React</li>
+    <li>React</li>
+    <li>React-DOM</li>
+    <li>React-Router-DOM</li>
+    <li>Styled-Components</li>
+</ul>
+<br>
