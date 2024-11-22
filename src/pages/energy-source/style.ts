@@ -84,6 +84,10 @@ export const ContentWrapper = styled.section`
           height: 25vh;
           border-right: 0;
           border-bottom: 1px solid var(--bg-accent);
+
+          img {
+            border-radius: 0;
+          }
       }
 
       aside:nth-child(2) {
@@ -123,6 +127,7 @@ export const AsideImage = styled.aside`
   border-right: 1px solid var(--bg-accent);
   
   img {
+      border-radius: 11px 0 0 11px;
       object-fit: cover;
       width: 100%;
       height: 100%;
